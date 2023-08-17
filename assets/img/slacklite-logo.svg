@@ -4,8 +4,8 @@
 	 viewBox="0 0 270 270" style="enable-background:new 0 0 270 270;" xml:space="preserve">
 <style type="text/css">
 	.svg-global{
-		transform: rotate(45deg);
 		transform-origin: center;
+		transform: scale(2) rotate(45deg);
 	}
 	.st0{fill:#2FB7EC;}
 	.st1{fill:#2FB7EC;}
