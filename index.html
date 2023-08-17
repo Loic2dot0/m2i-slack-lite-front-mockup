@@ -11,18 +11,34 @@
 </head>
 
 <body>
-    <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/slacklite-logo.svg" alt="Logo" width="40" height="40" class="d-inline-block align-text-middle">
+            Slack Lite
+          </a>
+          <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Menu</button>
+        </div>
+      </nav>
+    
 
     <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive"
         aria-labelledby="offcanvasResponsiveLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Slack Lite</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
                 aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <p class="mb-0">This is content within an <code>.offcanvas-lg</code>.</p>
+            <ul>
+                <li><a href="#">Général</a></li>
+                <li><a href="#">Canal 1</a></li>
+                <li><a href="#">Canal 2</a></li>
+                <li><a href="#">Canal 3</a></li>
+                <li><a href="#">Canal 4</a></li>
+                <li><a href="#">Canal 5</a></li>
+            </ul>
         </div>
     </div>
 
