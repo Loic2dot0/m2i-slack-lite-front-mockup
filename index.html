@@ -50,30 +50,30 @@
                                 <div class="mb-3">
                                     <label for="channel-name" class="form-label">Nom du canal</label>
                                     <input class="form-control" type="text" placeholder="Mon canal" id="channel-name"
-                                        name="channel-name">
+                                        name="channel-name" minlength="3" maxlength="25" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="channel-color" class="form-label">Choisir une couleur</label>
                                     <select class="form-select" id="channel-color" name="channel-color">
-                                        <option value="WHITE" selected>Blanc</option>
-                                        <option value="RED">Rouge</option>
-                                        <option value="CYAN">Cyan</option>
-                                        <option value="GREEN">Vert</option>
-                                        <option value="YELLOW">Jaune</option>
-                                        <option value="GREY">Gris</option>
-                                        <option value="BLACK">Noir</option>
-                                        <option value="BLUE">Bleu</option>
-                                        <option value="ORANGE">Orange</option>
-                                        <option value="PURPLE">Violet</option>
-                                        <option value="ELDENRING">Or</option>
+                                        <option value="WHITE" class="channel-color channel-color--white" selected>Blanc</option>
+                                        <option value="GREY" class="channel-color channel-color--grey">Gris</option>
+                                        <option value="BLACK" class="channel-color channel-color--black">Noir</option>
+                                        <option value="BLUE" class="channel-color channel-color--blue">Bleu</option>
+                                        <option value="PURPLE" class="channel-color channel-color--purple">Violet</option>
+                                        <option value="RED" class="channel-color channel-color--red">Rouge</option>
+                                        <option value="ORANGE" class="channel-color channel-color--orange">Orange</option>
+                                        <option value="YELLOW" class="channel-color channel-color--yellow">Jaune</option>
+                                        <option value="GREEN" class="channel-color channel-color--green">Vert</option>
+                                        <option value="CYAN" class="channel-color channel-color--cyan">Cyan</option>
+                                        <option value="ELDENRING" class="channel-color channel-color--eldenring">Elden</option>
                                     </select>
                                 </div>
                                 <div class="mb-3 form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="channel-deletable"
                                         checked>
-                                    <label class="form-check-label" for="flexCheckChecked">Canal supprimable</label>
+                                    <label class="form-check-label channel-deletable-label" for="channel-deletable">Canal supprimable</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Créer</button>
+                                <button type="submit" class="btn btn-outline-dark w-100">Créer</button>
                             </form>
                         </div>
 
@@ -87,15 +87,19 @@
                         </ul>
                     </div>
                 </div>
-                <main class="col-lg-9 col-xl-10 text-bg-light">
-                    <h2>Canal général</h2>
-
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo itaque exercitationem neque,
-                        illum maxime rerum iure, reiciendis suscipit dolor quo recusandae ducimus error! Beatae,
-                        assumenda
-                        itaque. Aut ut quas sit? Ipsum dolorum ipsam facere sit architecto vitae qui? Odit dolor
-                        assumenda
-                        facilis natus nulla commodi hic facere quae maiores a.</p>
+                <main class="col-lg-9 col-xl-10 text-bg-light p-0">
+                    <header class="header-channel channel-color--white">
+                        <h2>Canal général</h2>
+                    </header>
+                    
+                    <div class="container p-3">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo itaque exercitationem neque,
+                            illum maxime rerum iure, reiciendis suscipit dolor quo recusandae ducimus error! Beatae,
+                            assumenda
+                            itaque. Aut ut quas sit? Ipsum dolorum ipsam facere sit architecto vitae qui? Odit dolor
+                            assumenda
+                            facilis natus nulla commodi hic facere quae maiores a.</p>
+                    </div>                    
                 </main>
             </div>
         </div>

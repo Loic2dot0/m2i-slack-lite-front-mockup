@@ -17,3 +17,13 @@ function toggleChannelForm(){
         btnToggleCreate.setAttribute('title', 'créer un canal');
     }
 }
+
+const inputChannelColor = document.getElementById("channel-color");
+const headerMain = document.querySelector("main header");
+
+inputChannelColor.addEventListener("input", changeColor);
+
+function changeColor(e){
+    let color = e.target.value.toLowerCase();
+    headerMain.className = `header-channel channel-color--${color}`;
+}
