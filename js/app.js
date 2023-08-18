@@ -9,7 +9,11 @@ function toggleChannelForm(){
 
     if(toggleCreate){
         channelForm.classList.remove('d-none');
+        btnToggleCreate.classList.add('activate');
+        btnToggleCreate.setAttribute('title', 'réduire le formulaire');
     } else {
         channelForm.classList.add('d-none');
+        btnToggleCreate.classList.remove('activate');
+        btnToggleCreate.setAttribute('title', 'créer un canal');
     }
 }

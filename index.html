@@ -35,11 +35,18 @@
                             data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body flex-column">
-                        <h3>Canaux</h3>
+                        <div class="d-flex justify-content-between mb-3">
+                            <h3>Canaux</h3>
+                            <button type="button" class="btn btn-outline-dark rounded-circle" id="btn-toggle-create" title="créer un canal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                    <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                </svg>
+                            </button>
+                        </div>
 
                         <div class="mb-3">
-                            <button type="button" class="btn btn-light" id="btn-toggle-create">Créer un canal</button>
-                            <form id="channel-form" class="d-none mt-3">
+                            <form id="channel-form" class="d-none mt-3 pb-3 border-bottom border-dark">
+                                <h4>Créer un canal</h4>
                                 <div class="mb-3">
                                     <label for="channel-name" class="form-label">Nom du canal</label>
                                     <input class="form-control" type="text" placeholder="Mon canal" id="channel-name"
