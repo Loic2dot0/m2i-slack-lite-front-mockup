@@ -25,5 +25,5 @@ inputChannelColor.addEventListener("input", changeColor);
 
 function changeColor(e){
     let color = e.target.value.toLowerCase();
-    headerMain.className = `header-channel channel-color--${color}`;
+    headerMain.className = `header-channel channel-${color}`;
 }
