@@ -1,3 +1,7 @@
+textarea {
+    resize: none;
+}
+
 #btn-toggle-create {
     transition: transform 400ms ease-in-out;
     aspect-ratio: 1 / 1;

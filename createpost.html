@@ -102,18 +102,26 @@
                     </div>
                 </div>
                 <main class="col-lg-9 col-xl-10 text-bg-light p-0">
-                    <header class="header-channel channel-black">
-                        <h2>Utilisateur connecté</h2>
+                    <header class="header-channel channel-red">
+                        <h2>Création d'un post</h2>
                     </header>
                     
                     <div class="container p-3">
-                        <p>Page de démonstration d'un utilisateur connecté.</p>
+                        <p>Page de démonstration de création de publication.</p>
 
-                        <p>Affichage de l'avatar et du nom récupéré en base de données.</p>
+                        <p>Seul un utilisateur connecté peut publier du contenu.</p>
 
-                        <p>Bouton de déconnexion de l'utilisateur.</p>
+                        <p>Le formulaire de publication n'apparait que pour les utilisateurs connectés.</p>
 
-                        <p>Bouton pour accéder au compte utilisateur pour modifier ses données.</p>
+                        <p>Le formulaire est défini en positionnement "sticky" de manière a être toujours accessible peut importe le nombre de publications présentes.</p>
+
+                        <form class="container position-sticky bottom-0 start-0 bg-light border border-dark rounded p-3">
+                            <div class="mb-3">
+                                <label for="post-text" class="form-label">Écrire un message :</label>
+                                <textarea class="form-control" id="post-text" rows="3" placeholder="Publier un message dans le canal"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-dark">Publier</button>
+                        </form>
                     </div>                    
                 </main>
             </div>
