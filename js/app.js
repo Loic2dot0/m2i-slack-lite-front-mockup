@@ -27,3 +27,13 @@ function changeColor(e){
     let color = e.target.value.toLowerCase();
     headerMain.className = `header-channel channel-${color}`;
 }
+
+const btnLogin = document.getElementById('btn-login');
+const loginAlert = document.getElementById('login-alert');
+
+btnLogin.addEventListener("click", handleLogin);
+
+function handleLogin(e){
+    e.preventDefault();
+    loginAlert.classList.toggle('d-none');
+}
