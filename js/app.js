@@ -31,9 +31,33 @@ function changeColor(e){
 const btnLogin = document.getElementById('btn-login');
 const loginAlert = document.getElementById('login-alert');
 
-btnLogin.addEventListener("click", handleLogin);
+btnLogin && btnLogin.addEventListener("click", handleLogin);
 
 function handleLogin(e){
     e.preventDefault();
     loginAlert.classList.toggle('d-none');
+}
+
+const formSignup = document.getElementById("form-signup");
+const inputsSignup = document.querySelectorAll("#form-signup input");
+let isFormSignupValid = false
+
+formSignup && formSignup.addEventListener("submit", handleSignup);
+
+function handleSignup(e){
+    e.preventDefault();
+    isFormSignupValid = !isFormSignupValid;
+    console.log(isFormSignupValid);
+
+    if(isFormSignupValid){
+        inputsSignup.forEach(input => {
+            input.classList.remove("is-invalid");
+            input.classList.add("is-valid");
+        });
+    } else {
+        inputsSignup.forEach(input => {
+            input.classList.remove("is-valid");
+            input.classList.add("is-invalid");
+        });
+    }
 }
