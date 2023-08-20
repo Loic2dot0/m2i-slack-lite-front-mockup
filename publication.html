@@ -95,7 +95,7 @@
                             <li class="mb-2"><a href="./" class="btn btn-outline-dark w-100 text-break channel-white">Général</a></li>
                             <li class="mb-2"><a href="./loggeduser.html" class="btn btn-outline-dark w-100 text-break channel-black">Utilisateur connecté</a></li>
                             <li class="mb-2"><a href="./publication.html" class="btn btn-outline-dark w-100 text-break channel-red">Publication</a></li>
-                            <li class="mb-2"><a href="#" class="btn btn-outline-dark w-100 text-break channel-cyan">Canal 3</a></li>
+                            <li class="mb-2"><a href="voidchannel.html" class="btn btn-outline-dark w-100 text-break channel-cyan">Canal vide</a></li>
                             <li class="mb-2"><a href="#" class="btn btn-outline-dark w-100 text-break channel-green">Canal 4</a></li>
                             <li class="mb-2"><a href="#" class="btn btn-outline-dark w-100 text-break channel-eldenring">Canal 5</a></li>
                         </ul>
@@ -190,7 +190,13 @@
                             </div>
                         </div>
 
-
+                        <!-- Form pour la création de publication -->
+                        <!-- Utilisateur non connecté -->
+                        <div class="container position-sticky bottom-0 start-0 bg-light border border-dark rounded p-3 d-none">
+                            <p>Pour publier, veuillez vous connecter</p>
+                            <a class="btn btn-outline-dark" href="./login.html">Me connecter</a>
+                        </div>
+                        <!-- Utilisateur connecté -->
                         <form class="container position-sticky bottom-0 start-0 bg-light border border-dark rounded p-3">
                             <div class="mb-3">
                                 <label for="post-text" class="form-label">Écrire un message :</label>
@@ -198,6 +204,7 @@
                             </div>
                             <button type="submit" class="btn btn-outline-dark">Publier</button>
                         </form>
+                        <!-- fin form pour la création de publication -->
 
                         <!-- Modal pour la confirmation de suppression -->
                         <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">

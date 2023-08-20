@@ -92,26 +92,31 @@
                     </div>
                 </div>
                 <main class="col-lg-9 col-xl-10 bg-light p-0">
-                    <h2 class="text-center my-3">Connexion</h2>
+                    <header class="header-channel channel-cyan">
+                        <h2>Canal vide</h2>
+                    </header>
+                    
+                    <div class="container p-3">
+                        <div class="alert alert-info mb-5" role="alert">
+                            <p>C'est un peu vide par ici...</p>
+                            <p>N'hésitez pas a publier quelque chose !</p>
+                        </div>
 
-                    <div class="container text-center">
-                        <form class="border border-dark rounded col-12 col-lg-6 mx-auto mb-3 p-3">
+                        <!-- Form pour la création de publication -->
+                        <!-- Utilisateur non connecté -->
+                        <div class="container position-sticky bottom-0 start-0 bg-light border border-dark rounded p-3">
+                            <p>Pour publier, veuillez vous connecter</p>
+                            <a class="btn btn-outline-dark" href="./login.html">Me connecter</a>
+                        </div>
+                        <!-- Utilisateur connecté -->
+                        <form class="container position-sticky bottom-0 start-0 bg-light border border-dark rounded p-3 d-none">
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control text-center" id="email">
+                                <label for="post-text" class="form-label">Écrire un message :</label>
+                                <textarea class="form-control" id="post-text" rows="3" placeholder="Publier un message dans le canal"></textarea>
                             </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Mot de passe</label>
-                                <input type="password" class="form-control text-center" id="password">
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100" id="btn-login">Connexion</button>
-                            <div class="alert alert-danger mt-3 d-none" role="alert" id="login-alert">
-                                Email ou mot de passe invalide
-                            </div>
-                            <div class="border-top border-secondary-subtle mt-3 pt-3 pb-3">
-                                <a href="./signup.html" class="btn btn-outline-dark">Créer un nouveau compte</a>
-                            </div>  
+                            <button type="submit" class="btn btn-outline-dark">Publier</button>
                         </form>
+                        <!-- fin form pour la création de publication -->
                     </div>
                 </main>
             </div>
