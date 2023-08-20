@@ -3,9 +3,18 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 270 270" style="enable-background:new 0 0 270 270;" xml:space="preserve">
 <style type="text/css">
+	@keyframes spinlogo{
+		0%{
+			transform: scale(2) rotate(0);
+		}
+		100%{
+			transform: scale(2) rotate(-1turn);
+		}
+	}
 	.svg-global{
 		transform-origin: center;
 		transform: scale(2) rotate(45deg);
+		/*animation: spinlogo 30s infinite linear;*/
 	}
 	.st0{fill:#2FB7EC;}
 	.st1{fill:#2FB7EC;}
