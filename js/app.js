@@ -1,3 +1,4 @@
+// Toggle form create new Channel
 const btnToggleCreate = document.getElementById('btn-toggle-create');
 const channelForm = document.getElementById('channel-form');
 
@@ -16,6 +17,7 @@ function toggleChannelForm(){
     }
 }
 
+// Update channel color
 const inputChannelColor = document.getElementById("channel-color");
 const headerMain = document.querySelector("main header");
 
@@ -26,6 +28,7 @@ function changeColor(e){
     headerMain.className = `header-channel channel-${color}`;
 }
 
+// toggle login alert message
 const btnLogin = document.getElementById('btn-login');
 const loginAlert = document.getElementById('login-alert');
 
@@ -36,6 +39,7 @@ function handleLogin(e){
     loginAlert.classList.toggle('d-none');
 }
 
+// toggle signup alert/valid messages
 const formSignup = document.getElementById("form-signup");
 const inputsSignup = document.querySelectorAll("#form-signup input");
 let isFormSignupValid = false
@@ -57,4 +61,32 @@ function handleSignup(e){
             input.classList.add("is-invalid");
         });
     }
+}
+
+// Modal confirm delete
+const modalDelete = document.getElementById("deleteModal");
+const modalBtnConfirm = document.getElementById("modal-btn-confirm");
+
+modalBtnConfirm && modalBtnConfirm.addEventListener('click', closeModalConfirmDelete);
+
+function closeModalConfirmDelete(){
+    let modal = bootstrap.Modal.getInstance(modalDelete);
+    modal.hide();
+}
+
+// Edit functions
+const editBtn = document.getElementById("edit-btn");
+const editBtnSubmit = document.getElementById("edit-btn-submit");
+const editBtnClose = document.getElementById("edit-btn-close");
+const editText = document.getElementById("edit-text");
+const editForm = document.getElementById("edit-form");
+
+editBtn && editBtn.addEventListener('click', toggleEdit);
+editBtnSubmit && editBtnSubmit.addEventListener('click', toggleEdit);
+editBtnClose && editBtnClose.addEventListener('click', toggleEdit);
+
+function toggleEdit(e){
+    e.preventDefault();
+    editText.classList.toggle("d-none");
+    editForm.classList.toggle("d-none");
 }
