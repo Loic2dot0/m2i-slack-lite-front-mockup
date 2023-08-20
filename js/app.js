@@ -8,11 +8,9 @@ function toggleChannelForm(){
     toggleCreate = !toggleCreate;
 
     if(toggleCreate){
-        channelForm.classList.remove('d-none');
         btnToggleCreate.classList.add('activate');
         btnToggleCreate.setAttribute('title', 'réduire le formulaire');
     } else {
-        channelForm.classList.add('d-none');
         btnToggleCreate.classList.remove('activate');
         btnToggleCreate.setAttribute('title', 'créer un canal');
     }
@@ -47,7 +45,6 @@ formSignup && formSignup.addEventListener("submit", handleSignup);
 function handleSignup(e){
     e.preventDefault();
     isFormSignupValid = !isFormSignupValid;
-    console.log(isFormSignupValid);
 
     if(isFormSignupValid){
         inputsSignup.forEach(input => {
