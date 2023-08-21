@@ -13,8 +13,8 @@
 	}
 	.svg-global{
 		transform-origin: center;
-		transform: scale(2) rotate(45deg);
-		/*animation: spinlogo 30s infinite linear;*/
+		/*transform: scale(2) rotate(45deg);*/
+		animation: spinlogo 30s infinite linear;
 	}
 	.st0{fill:#2FB7EC;}
 	.st1{fill:#2FB7EC;}
