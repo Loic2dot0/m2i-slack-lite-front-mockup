@@ -1,6 +1,6 @@
 // Toggle form create new Channel
-const btnToggleCreate = document.getElementById('btn-toggle-create');
-const channelForm = document.getElementById('channel-form');
+const btnToggleCreate = document.querySelector('#btn-toggle-create');
+const channelForm = document.querySelector('#channel-form');
 
 let toggleCreate = false;
 btnToggleCreate.addEventListener('click', toggleChannelForm);
@@ -18,10 +18,10 @@ function toggleChannelForm(){
 }
 
 // Update channel color
-const inputChannelColor = document.getElementById("channel-color");
-const headerMain = document.querySelector("main header");
+const inputChannelColor = document.querySelector('#channel-color');
+const headerMain = document.querySelector('main header');
 
-inputChannelColor.addEventListener("input", changeColor);
+inputChannelColor.addEventListener('input', changeColor);
 
 function changeColor(e){
     let color = e.target.value.toLowerCase();
@@ -29,10 +29,10 @@ function changeColor(e){
 }
 
 // toggle login alert message
-const btnLogin = document.getElementById('btn-login');
-const loginAlert = document.getElementById('login-alert');
+const btnLogin = document.querySelector('#btn-login');
+const loginAlert = document.querySelector('#login-alert');
 
-btnLogin && btnLogin.addEventListener("click", handleLogin);
+btnLogin && btnLogin.addEventListener('click', handleLogin);
 
 function handleLogin(e){
     e.preventDefault();
@@ -40,11 +40,11 @@ function handleLogin(e){
 }
 
 // toggle signup alert/valid messages
-const formSignup = document.getElementById("form-signup");
-const inputsSignup = document.querySelectorAll("#form-signup input");
+const formSignup = document.querySelector('#form-signup');
+const inputsSignup = document.querySelectorAll('#form-signup input');
 let isFormSignupValid = false
 
-formSignup && formSignup.addEventListener("submit", handleSignup);
+formSignup && formSignup.addEventListener('submit', handleSignup);
 
 function handleSignup(e){
     e.preventDefault();
@@ -52,20 +52,20 @@ function handleSignup(e){
 
     if(isFormSignupValid){
         inputsSignup.forEach(input => {
-            input.classList.remove("is-invalid");
-            input.classList.add("is-valid");
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
         });
     } else {
         inputsSignup.forEach(input => {
-            input.classList.remove("is-valid");
-            input.classList.add("is-invalid");
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
         });
     }
 }
 
 // Modal confirm delete
-const modalDelete = document.getElementById("deleteModal");
-const modalBtnConfirm = document.getElementById("modal-btn-confirm");
+const modalDelete = document.querySelector('#deleteModal');
+const modalBtnConfirm = document.querySelector('#modal-btn-confirm');
 
 modalBtnConfirm && modalBtnConfirm.addEventListener('click', closeModalConfirmDelete);
 
@@ -75,11 +75,11 @@ function closeModalConfirmDelete(){
 }
 
 // Edit functions
-const editBtn = document.getElementById("edit-btn");
-const editBtnSubmit = document.getElementById("edit-btn-submit");
-const editBtnClose = document.getElementById("edit-btn-close");
-const editText = document.getElementById("edit-text");
-const editForm = document.getElementById("edit-form");
+const editBtn = document.querySelector('#edit-btn');
+const editBtnSubmit = document.querySelector('#edit-btn-submit');
+const editBtnClose = document.querySelector('#edit-btn-close');
+const editText = document.querySelector('#edit-text');
+const editForm = document.querySelector('#edit-form');
 
 editBtn && editBtn.addEventListener('click', toggleEdit);
 editBtnSubmit && editBtnSubmit.addEventListener('click', toggleEdit);
@@ -87,6 +87,6 @@ editBtnClose && editBtnClose.addEventListener('click', toggleEdit);
 
 function toggleEdit(e){
     e.preventDefault();
-    editText.classList.toggle("d-none");
-    editForm.classList.toggle("d-none");
+    editText.classList.toggle('d-none');
+    editForm.classList.toggle('d-none');
 }
