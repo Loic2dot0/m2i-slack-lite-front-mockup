@@ -90,6 +90,10 @@ textarea {
     aspect-ratio: 1 / 1;
 }
 
+.container-postform{
+    bottom: 1rem!important;
+}
+
 @media screen and (min-width: 992px) {
     .container-avatar{
         width: 100%;
