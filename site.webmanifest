@@ -1,0 +1,32 @@
+{
+    "name": "Slack Lite",
+    "short_name": "Slack Lite",
+    "description": "Une version minimaliste de Slack",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "any",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#E9ECEF",
+    "theme_color": "#E9ECEF",
+    "orientation": "any"
+}
