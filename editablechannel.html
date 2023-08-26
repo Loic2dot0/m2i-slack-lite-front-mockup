@@ -35,8 +35,18 @@
                             data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body flex-column">
-                        <div class="mb-3">
-                            <a class="btn btn-outline-dark w-100" href="./login.html">Me connecter</a>
+                        <div class="mb-3 position-relative">
+                            <div class="container text-center mb-3 container-avatar">
+                                <img src="./assets/img/default-user.svg" class="img-thumbnail rounded-circle w-100 object-fit-cover container-avatar-img" alt="avatar de { User }">
+                            </div>
+                            <p class="h4 text-center text-break">User name</p>
+                            <a class="btn btn-outline-dark w-100 mb-3" href="./account.html">Mon compte</a>                           
+                            <button type="button" class="btn btn-danger btn-sm position-absolute top-0 end-0" href="/login.html" title="Me déconnecter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-x" viewBox="0 0 16 16">
+                                    <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+                                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm-.646-4.854.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 0 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 .708-.708Z"/>
+                                </svg>
+                            </button>
                         </div>
 
                         <div class="d-flex justify-content-between mb-3">
@@ -93,43 +103,27 @@
                 </div>
 
                 <main class="col-lg-9 col-xl-10 bg-light p-0 rounded">
-                    <h2 class="text-center my-3">Créer un compte</h2>
-
-                    <div class="container text-center">
-                        <form class="border border-dark rounded col-12 col-lg-6 mx-auto mb-3 p-3" id="form-signup" novalidate>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control text-center is-invalid" aria-describedby="email-feedback" id="email" required>
-                                <div class="invalid-feedback" id="email-feedback">
-                                    Email invalide
+                    <header class="header-channel rounded-top channel-eldenring">
+                        <h2>Canal modifiable</h2>
+                    </header>
+                    
+                    <div class="container p-3">
+                        <div class="row mx-1 mb-3 bg-white shadow rounded overflow-hidden position-relative">
+                            <div class="col-12 col-lg-2 p-2 bg-secondary-subtle">
+                                <div class="container text-center mb-3 container-avatar">
+                                    <img src="./assets/img/malenia.webp" class="img-thumbnail rounded-circle w-75 object-fit-cover container-avatar-img" alt="avatar de { User }">
                                 </div>
+                                <p class="h5 text-center text-break">Administrateur</p>
                             </div>
-                            
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Pseudo</label>
-                                <input type="text" class="form-control text-center is-valid" aria-describedby="pseudo-feedback" id="name">
-                                <div class="invalid-feedback" id="pseudo-feedback">
-                                    Pseudo invalide
-                                </div>
+                            <div class="col-12 col-lg-10 py-1">
+                                <p class="">Publié le 20 août 2023, 13:17</p>
+                                <p class="text-break">
+                                    Page de démonstration d'un canal modifiable.<br>
+                                    Si l'utilisateur connecté est le créateur du canal, les options du canal sont alors disponible
+                                </p>                        
                             </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Mot de passe</label>
-                                <input type="password" class="form-control text-center is-invalid" id="password" aria-describedby="passwordHelp">
-                                <div id="passwordHelp" class="form-text">Doit comporter minuscule, majuscule, chiffre, caractère spécial et minimun 8 caractères</div>
-                                <div class="invalid-feedback" id="password-feedback">
-                                    Mot de passe invalide
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password-confirm" class="form-label">Confirmation du mot de passe</label>
-                                <input type="password" class="form-control text-center is-invalid" id="password-confirm">
-                                <div class="invalid-feedback" id="password-confirm-feedback">
-                                    Confirmation du mot de passe invalide
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Valider</button>
-                        </form>
-                    </div>
+                        </div>
+                    </div>                    
                 </main>
             </div>
         </div>
