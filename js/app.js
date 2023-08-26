@@ -19,13 +19,28 @@ function toggleChannelForm(){
 
 // Update channel color
 const inputChannelColor = document.querySelector('#channel-color');
-const headerMain = document.querySelector('main header');
+const inputUpdateChannelColor = document.querySelector('#update-channel-color');
+const headerChannel = document.querySelector('.header-channel');
+const channelColor = [ 'channel-red',
+                        'channel-cyan',
+                        'channel-green',
+                        'channel-yellow',
+                        'channel-grey',
+                        'channel-black',
+                        'channel-white',
+                        'channel-blue',
+                        'channel-orange',
+                        'channel-purple',
+                        'channel-eldenring'
+                    ];
 
 inputChannelColor.addEventListener('input', changeColor);
+inputUpdateChannelColor && inputUpdateChannelColor.addEventListener('input', changeColor);
 
-function changeColor(e){
-    let color = e.target.value.toLowerCase();
-    headerMain.className = `header-channel channel-${color}`;
+function changeColor(){
+    let color = this.value.toLowerCase();
+    headerChannel.classList.remove(...channelColor);
+    headerChannel.classList.add(`channel-${color}`);
 }
 
 // toggle login alert message
@@ -63,7 +78,7 @@ function handleSignup(e){
     }
 }
 
-// Modal confirm delete
+// Modal Post confirm delete
 const modalDelete = document.querySelector('#deleteModal');
 const modalBtnConfirm = document.querySelector('#modal-btn-confirm');
 
@@ -74,7 +89,7 @@ function closeModalConfirmDelete(){
     modal.hide();
 }
 
-// Edit functions
+// Edit Post functions
 const editBtn = document.querySelector('#edit-btn');
 const editBtnSubmit = document.querySelector('#edit-btn-submit');
 const editBtnClose = document.querySelector('#edit-btn-close');
@@ -90,3 +105,31 @@ function toggleEdit(e){
     editText.classList.toggle('d-none');
     editForm.classList.toggle('d-none');
 }
+
+// Modal confirm delete channel
+const modalChannelDelete = document.querySelector('#deleteChannelModal');
+const modalChannelBtnConfirm = document.querySelector('#modalChannel-btn-confirm');
+
+modalChannelBtnConfirm && modalChannelBtnConfirm.addEventListener('click', closeModalChannelConfirmDelete);
+
+function closeModalChannelConfirmDelete(){
+    let modal = bootstrap.Modal.getInstance(modalChannelDelete);
+    modal.hide();
+}
+
+// Edit Channel function
+const editChannelBtn = document.querySelector('#editChannel-btn');
+const editchannelBtnClose = document.querySelector('#editchannel-btn-close');
+const channelUpdateForm = document.querySelector('#channel-updateform');
+const channelTitle = document.querySelector('.header-channel h2');
+
+editChannelBtn && editChannelBtn.addEventListener('click', toggleEditChannel);
+editchannelBtnClose && editchannelBtnClose.addEventListener('click', toggleEditChannel);
+channelUpdateForm && channelUpdateForm.addEventListener('submit', toggleEditChannel);
+
+function toggleEditChannel(e){
+    e.preventDefault();
+    channelTitle.classList.toggle('d-none');
+    channelUpdateForm.classList.toggle('d-none');
+}
+
