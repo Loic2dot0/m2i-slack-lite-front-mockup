@@ -104,6 +104,18 @@ textarea {
     bottom: 1rem!important;
 }
 
+.error-title{
+    font-size: 8rem;
+    color: rgb(203, 206, 209);
+    /*color: rgb(200, 200, 200);*/
+    color: #e1e1e1;
+    font-weight: bold;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
+    /*color: rgba(33, 37, 41, 0.5);*/
+    
+}
+
+
 @media screen and (min-width: 992px) {
     .container-avatar{
         width: 100%;
